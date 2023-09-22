@@ -10,11 +10,11 @@ const config: HardhatUserConfig = {
       url: "http://localhost:8545",
     },
     wannsee: {
-            url: "http://207.246.99.8:8545",
+            url: "https://wannsee-rpc.mxc.com",
             chainId: 5167003,
-            // accounts: real_accounts,
+            //accounts: ["6ae4bf9ec354bb7770407fef831151d5857d731a8bb98ce0b1d215861337e8e4"],
             accounts: ["6ae4bf9ec354bb7770407fef831151d5857d731a8bb98ce0b1d215861337e8e4"] as HttpNetworkAccountsUserConfig | undefined,
-            gasPrice: 6000000000000,
+            //gasPrice: 9000000000000,
             saveDeployments: true,
         }
   }

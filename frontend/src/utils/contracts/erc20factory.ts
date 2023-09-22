@@ -271,7 +271,7 @@ export const FACTORY_ABI_FULL = [
 
 const erc20factory = {
   address: ethers.utils.getAddress(
-    `0x89db961F6556A918507EC295c238a19cBBfC6D26`,
+    `0x2b8546F1E9B59eF499Acb6969D8B455DeAC6CE1B`,
   ),
   abi: [
     {
