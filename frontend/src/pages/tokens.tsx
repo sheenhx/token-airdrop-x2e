@@ -1,6 +1,7 @@
 import { Card } from 'flowbite-react'
 import { NextPageWithLayout } from './_app'
 import Layout from '@components/Layout'
+import { Link } from './_link.tsx'
 import { ReactElement, useState } from 'react'
 import ERC20_FACTORY, { FACTORY_ABI_FULL } from '@utils/contracts/erc20factory'
 import { ERC20_IMPL_ABI_FULL } from '@utils/contracts/erc20'
@@ -64,7 +65,7 @@ const copyToClipboard = (text) => {
                   </svg>
                   <p className="ml-4">
                     <code className="text-xs font-bold text-gray-900">
-                      {token}
+                      <Link txHash={token} />
                     </code>
                   </p>
                 </li>
