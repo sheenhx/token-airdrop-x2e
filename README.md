@@ -35,7 +35,8 @@ Sample airdrop format:
 ### **Contracts**
 
 1. Install dependencies: `cd contracts && yarn`
-2. Compile: `yarn hardhat compile`
+2. Compile: `yarn hardhat compile` or
+3. Compile and Deploy: `truffle migrate --network moonchain`
 3. Run tests: `yarn hardhat test`
 4. Generate documentation: `yarn hardhat docgen` (generates html docs at `./contracts/contracts/docgen/`).
    Most contracts implement the NatSpec documentation format, which docgen picks up.
