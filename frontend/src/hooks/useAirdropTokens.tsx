@@ -23,6 +23,11 @@ type IUseAirdropTokens = {
 
 const useAirdropTokens = ({ token }: IUseAirdropTokens) => {
   const { address } = useAccount()
+  const userAddress = '0x0795D90c6d60F7c77041862E9aE5059B4d5e0d7A'
+  const ercAddress = '0x2b8546F1E9B59eF499Acb6969D8B455DeAC6CE1B'
+  // const { tokensDeployed, isTokensLoading } = useGetTokens(
+  //   userAddress,
+  // )
   const { tokensDeployed, isTokensLoading } = useGetTokens(
     ethers.utils.getAddress(String(address)),
   )

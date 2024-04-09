@@ -7,8 +7,16 @@ import { Link } from '@components/Link'
 
 const AirdropForm = (): React.ReactElement<any, any> => {
   const onSubmit = (data) => console.log(data)
-
-  const {
+  // const {
+  //   register,
+  //   handleSubmit,
+  //   watch,
+  // } = useForm<AirdropForm>({
+  //   defaultValues: {
+  //     token: '0x',
+  //   },
+  // })
+    const {
     register,
     handleSubmit,
     watch,
@@ -17,6 +25,7 @@ const AirdropForm = (): React.ReactElement<any, any> => {
       token: '0x',
     },
   })
+
 
   const [token] = watch([`token`])
 
