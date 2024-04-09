@@ -21,11 +21,20 @@ const sleep = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms))
 const Page: NextPageWithLayout = () => {
   const { address } = useAccount()
 
+  // console.log('ERC20_FACTORY.address', ERC20_FACTORY.address);
+  // console.log('FACTORY_ABI_FULL', FACTORY_ABI_FULL);
+  // console.log('[ethers.utils.getAddress(address || `0x`)]', [ethers.utils.getAddress(address || `0x`)]);
+
+  const userAddress = '0x0795D90c6d60F7c77041862E9aE5059B4d5e0d7A'
+  const ercAddress = '0x2b8546F1E9B59eF499Acb6969D8B455DeAC6CE1B'
+
   const { data, isLoading } = useContractRead({
-    address: ERC20_FACTORY.address,
     abi: FACTORY_ABI_FULL,
-    functionName: `getERC20s`,
+    address: ERC20_FACTORY.address,
+    // address: ercAddress,
     args: [ethers.utils.getAddress(address || `0x`)],
+    // args: [userAddress],
+    functionName: `getERC20s`,
   })
 
 const copyToClipboard = (text) => {
@@ -53,8 +62,8 @@ const copyToClipboard = (text) => {
                 <li key={index} className="flex items-center text-center">
                   <svg
                     className="h-6 w-6 flex-none fill-sky-100 stroke-sky-500 stroke-2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                   >
                     <circle cx="12" cy="12" r="11" />
                     <path

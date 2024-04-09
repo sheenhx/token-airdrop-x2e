@@ -17,11 +17,12 @@ Airdrop address: 0x50Af2311F45317473C804447B72B52233aa32A73
 
 ## Contract Setup:
 1. Run `yarn` in this directory to install all required dependencies.
-2. Run `yarn hardhat compile` to generate the contract artifacts. These artifacts will be used so that you can interact with the contracts from your dapp. OR
-3. Compile and Deploy: `truffle migrate --network moonchain` to compile and deploy the contract to geneva-moonchain testnest
-4. Split your terminal into 2 windows. 
-5. In one, run `yarn hardhat node` to run the hardhat chain locally on your machine. This will make the chain accessible at `http://localhost:8545`
-6. In the other, run `yarn hardhat run scripts/deploy.ts`. Make sure to take note of the contract addresses that are printed to the console when this command is ran, as you will use these to call the contracts from your dapp. This deploy script does the following:
+2. Remember to configure keys.json properly.
+3. Run `yarn hardhat compile` to generate the contract artifacts. These artifacts will be used so that you can interact with the contracts from your dapp. OR
+4. Compile and Deploy: `truffle migrate --network moonchain` to compile and deploy the contract to geneva-moonchain testnest
+5. Split your terminal into 2 windows. 
+6. In one, run `yarn hardhat node` to run the hardhat chain locally on your machine. This will make the chain accessible at `http://localhost:8545`
+7. In the other, run `yarn hardhat run scripts/deploy.ts`. Make sure to take note of the contract addresses that are printed to the console when this command is ran, as you will use these to call the contracts from your dapp. This deploy script does the following:
    1. Deploy the ERC20 token contract and mint tokens to Hardhat Account #0 (listed in the terminal output of the `yarn hardhat node` command).
    2. Deploy the Airdrop contract while passing our ERC20 token's address to the constructor of the Airdrop contract.
 

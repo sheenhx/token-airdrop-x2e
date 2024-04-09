@@ -19,14 +19,14 @@ const LayoutNavbar: React.FC = () => {
           <Navbar.Toggle />
         </div>
         <Navbar.Collapse>
-          <Navbar.Link onClick={() => router.push(`/`)}>Home</Navbar.Link>
-          <Navbar.Link onClick={() => router.push(`/deploy`)}>
+          <Navbar.Link className="cursor-pointer" onClick={() => router.push(`/`)}>Home</Navbar.Link>
+          <Navbar.Link className="cursor-pointer" onClick={() => router.push(`/deploy`)}>
             Deploy Token
           </Navbar.Link>
-          <Navbar.Link onClick={() => router.push(`/tokens`)}>
+          <Navbar.Link className="cursor-pointer" onClick={() => router.push(`/tokens`)}>
             My Tokens
           </Navbar.Link>
-          <Navbar.Link onClick={() => router.push(`/airdrop`)}>
+          <Navbar.Link className="cursor-pointer" onClick={() => router.push(`/airdrop`)}>
             Airdrop
           </Navbar.Link>
         </Navbar.Collapse>

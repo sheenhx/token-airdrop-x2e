@@ -10,6 +10,7 @@ export const useGetTokens = (address: `0x${string}`) => {
     abi: FACTORY_ABI_FULL,
     functionName: `getERC20s`,
     args: [ethers.utils.getAddress(address || `0x`)],
+    // args: ['0x0795D90c6d60F7c77041862E9aE5059B4d5e0d7A'],
   })
 
   return { tokensDeployed, isTokensLoading }

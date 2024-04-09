@@ -3,12 +3,12 @@ import { Table } from 'flowbite-react'
 import React from 'react'
 
 type Props = {
-  data: string[]
+  data: string[] | unknown[]
 }
 
 type RowProps = {
   address: string
-  amount: number
+  amount: number | string
 }
 
 const Row: React.FC<RowProps> = ({ address, amount }) => {
